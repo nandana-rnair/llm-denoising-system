@@ -1,49 +1,135 @@
 # 🧠 LLM Output Denoising System (Multi-Agent AI Pipeline)
 
-## 🚀 Overview
+---
 
-This project is a multi-agent LLM output denoising and verification system designed to improve the reliability, factual accuracy, and consistency of AI-generated responses.
+## 🧠 System Architecture
 
-It takes an input question, generates an LLM response, and then passes it through multiple specialized agents that:
+The system follows a modular multi-agent pipeline that progressively refines and validates LLM outputs.
+User Input
+│
+▼
+LLM Response Generator (Groq API)
+│
+▼
+Claim Extraction Agent
+│
+▼
+Fact Checking Agent
+│
+▼
+Consistency Checking Agent
+│
+▼
+Style Improvement Agent
+│
+▼
+Final Review Agent
+│
+▼
+Final Output + Quality Scores
 
-- Extract claims  
-- Fact-check responses  
-- Detect inconsistencies  
-- Improve style and clarity  
-- Produce a final validated output with scoring  
+
+---
+
+## 🔄 Architecture Flow (Visual Box Diagram)
+
+
+┌──────────────────────────────┐
+│ User Input │
+└──────────────┬───────────────┘
+│
+▼
+┌──────────────────────────────┐
+│ Groq LLM Generator │
+└──────────────┬───────────────┘
+│
+▼
+┌──────────────────────────────┐
+│ Claim Extraction Agent │
+└──────────────┬───────────────┘
+│
+▼
+┌──────────────────────────────┐
+│ Fact Checking Agent │
+└──────────────┬───────────────┘
+│
+▼
+┌──────────────────────────────┐
+│ Consistency Checking Agent │
+└──────────────┬───────────────┘
+│
+▼
+┌──────────────────────────────┐
+│ Style Improvement Agent │
+└──────────────┬───────────────┘
+│
+▼
+┌──────────────────────────────┐
+│ Final Review Agent │
+└──────────────┬───────────────┘
+│
+▼
+┌──────────────────────────────┐
+│ Final Response + Score │
+└──────────────────────────────┘
+
+
+---
+
+## 💡 Why This Project Matters
+
+Large Language Models often produce:
+- Hallucinated facts  
+- Inconsistent reasoning  
+- Unstructured responses  
+
+This system solves that by introducing a **multi-agent verification pipeline** that improves:
+
+- Accuracy  
+- Reliability  
+- Readability  
+- Consistency  
+
+---
+
+## 🤖 Agents Overview
+
+- **Claim Extraction Agent** → Extracts factual statements from LLM output  
+- **Fact Checking Agent** → Validates claims using reasoning  
+- **Consistency Checking Agent** → Detects contradictions in response  
+- **Style Agent** → Improves grammar and readability  
+- **Final Review Agent** → Produces final polished output with scoring  
+
+---
+
+## 🎯 Input & Output
+
+### 📥 Input:
+User enters a natural language question.
+
+Example:
+
+Where is the Eiffel Tower located?
+
+
+### 📤 Output:
+- Verified factual response  
+- Improved readability  
+- Consistency-checked output  
+- Final quality score (0–100)  
 
 ---
 
 ## 🎯 Key Features
 
 - 🤖 LLM-based response generation using Groq API  
-- 🔍 Automated claim extraction  
-- ✅ Fact-checking agent for verifying correctness  
-- 🔄 Consistency checker to detect contradictions  
-- ✍️ Style improvement agent for readability enhancement  
-- 🧾 Final review agent for output validation  
-- 📊 Scoring system to evaluate response quality  
-- 🧩 Modular multi-agent architecture  
-
----
-
-## 🏗️ System Architecture
-
-User Input  
-↓  
-LLM Response Generator (Groq)  
-↓  
-Claim Extraction Agent  
-↓  
-Fact Checking Agent  
-↓  
-Consistency Checking Agent  
-↓  
-Style Improvement Agent  
-↓  
-Final Review Agent  
-↓  
-Final Clean Output + Scores  
+- 🔍 Claim extraction  
+- ✅ Fact verification system  
+- 🔄 Consistency checking  
+- ✍️ Style improvement module  
+- 🧾 Final review agent  
+- 📊 Score-based evaluation system  
+- 🧩 Fully modular multi-agent architecture  
 
 ---
 
@@ -52,12 +138,14 @@ Final Clean Output + Scores
 - Python 🐍  
 - Groq API  
 - dotenv  
-- Multi-agent architecture  
+- Multi-agent pipeline architecture  
 - Git & GitHub  
 
 ---
 
 ## 📁 Project Structure
+
+
 llm-denoising-system/
 │── agents/
 │ ├── fact_checking_agent.py
@@ -82,20 +170,16 @@ llm-denoising-system/
 │── .gitignore
 
 
-
 ---
 
 ## ⚙️ Installation & Setup
 
 ### 1. Clone the repository
-
-```bash id="s4"
-git clone https://github.com/<nandana-rnair>/llm-denoising-system.git
+```bash
+git clone https://github.com/nandana-rnair/llm-denoising-system.git
 cd llm-denoising-system
 
-
-### 2. Create virtual environment
-```bash
+2. Create virtual environment
 python -m venv venv
 venv\Scripts\activate
 
@@ -103,29 +187,12 @@ venv\Scripts\activate
 pip install -r requirements.txt
 
 4. Add environment variables
-
 Create a .env file:
 GROQ_API_KEY=your_api_key_here
 
 
 5. Run the project
 python main.py
-
-
-💡 Example Output
-Input:
-
-Where is the Eiffel Tower located?
-
-Output:
-Fact-checked response
-Consistency validated
-Style improved
-Final score: 100/100
-
-
-
 👩‍💻 Author
+
 Nandana R Nair
-
-
