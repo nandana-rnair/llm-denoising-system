@@ -1,4 +1,4 @@
-# LLM Denoising System � Multi-Agent Pipeline
+﻿# LLM Denoising System — Multi-Agent Pipeline
 
 A structured Python project for improving LLM outputs through extraction, verification, consistency checking, style improvement, and final review.
 
@@ -62,25 +62,25 @@ flowchart TB
 
 ```text
 llm-denoising-system/
-+-- agents/
-�   +-- conciseness_agent.py
-�   +-- consistency_agent.py
-�   +-- fact_checking_agent.py
-�   +-- final_review_agent.py
-�   +-- issue_extraction_agent.py
-�   +-- style_agent.py
-+-- evaluation/
-�   +-- metrics.py
-+-- utils/
-�   +-- llm.py
-�   +-- logger.py
-+-- app.py
-+-- main.py
-+-- pipeline.py
-+-- requirements.txt
-+-- test_groq.py
-+-- workflow.drawio
-+-- README.md
+├── agents/
+│   ├── conciseness_agent.py
+│   ├── consistency_agent.py
+│   ├── fact_checking_agent.py
+│   ├── final_review_agent.py
+│   ├── issue_extraction_agent.py
+│   └── style_agent.py
+├── evaluation/
+│   └── metrics.py
+├── utils/
+│   ├── llm.py
+│   └── logger.py
+├── app.py
+├── main.py
+├── pipeline.py
+├── requirements.txt
+├── test_groq.py
+├── workflow.drawio
+└── README.md
 ```
 
 ### File responsibilities
