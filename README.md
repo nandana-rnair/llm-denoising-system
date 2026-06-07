@@ -135,7 +135,7 @@ Where is the Eiffel Tower located?
 
 ##  Tech Stack
 
-- Python 🐍  
+- Python 
 - Groq API  
 - dotenv  
 - Multi-agent pipeline architecture  
@@ -193,6 +193,6 @@ GROQ_API_KEY=your_api_key_here
 
 5. Run the project
 python main.py
-👩‍💻 Author
+Author
 
 Nandana R Nair
