@@ -1,4 +1,4 @@
-﻿# LLM Denoising System — Multi-Agent Pipeline
+# LLM Denoising System — Multi-Agent Pipeline
 
 A structured Python project for improving LLM outputs through extraction, verification, consistency checking, style improvement, and final review.
 
@@ -23,11 +23,11 @@ This project is organized as a linear, modular pipeline. Each component has a cl
 
 ### Core architecture components
 
-- `utils/llm.py`: Adapter for the language model provider
-- `pipeline.py`: Orchestrates the pipeline and passes data between agents
-- `agents/`: Contains modular agent classes that inspect and improve the response
-- `evaluation/metrics.py`: Computes quality scores and metrics
-- `main.py` / `app.py`: Primary entrypoints to run the system
+- utils/llm.py: Adapter for the language model provider
+- pipeline.py: Orchestrates the pipeline and passes data between agents
+- gents/: Contains modular agent classes that inspect and improve the response
+- evaluation/metrics.py: Computes quality scores and metrics
+- main.py / pp.py: Primary entrypoints to run the system
 
 ---
 
@@ -45,7 +45,7 @@ The workflow is designed to keep responsibilities separate and make the pipeline
 
 ### Workflow diagram
 
-```mermaid
+`mermaid
 flowchart TB
   UI[User Input] --> LLM[LLM Generator]
   LLM --> Claim[Claim Extraction Agent]
@@ -54,13 +54,13 @@ flowchart TB
   Consistency --> Style[Style / Conciseness Agent]
   Style --> Review[Final Review Agent]
   Review --> Output[Final Response + Score]
-```
+`
 
 ---
 
 ## Project Structure
 
-```text
+`	ext
 llm-denoising-system/
 ├── agents/
 │   ├── conciseness_agent.py
@@ -81,19 +81,20 @@ llm-denoising-system/
 ├── test_groq.py
 ├── workflow.drawio
 └── README.md
-```
+`
 
 ### File responsibilities
 
-- `app.py`: Optional application entrypoint.
-- `main.py`: Main runner for the pipeline.
-- `pipeline.py`: Connects the LLM output to each agent.
-- `requirements.txt`: Python dependencies.
-- `test_groq.py`: Example or validation test.
-- `workflow.drawio`: Draw.io workflow diagram.
-- `agents/`: Modular agent implementations.
-- `utils/`: LLM and logging utilities.
-- `evaluation/metrics.py`: Scoring and metrics.
+- pp.py: Optional application entrypoint.
+- main.py: Main runner for the pipeline.
+- pipeline.py: Connects the LLM output to each agent.
+- 
+equirements.txt: Python dependencies.
+- 	est_groq.py: Example or validation test.
+- workflow.drawio: Draw.io workflow diagram.
+- gents/: Modular agent implementations.
+- utils/: LLM and logging utilities.
+- evaluation/metrics.py: Scoring and metrics.
 
 ---
 
@@ -117,9 +118,9 @@ Each agent performs one focused step in the denoising pipeline:
 
 Example:
 
-```text
+`	ext
 Where is the Eiffel Tower located?
-```
+`
 
 ### Output
 
@@ -134,29 +135,29 @@ Where is the Eiffel Tower located?
 
 1. Clone the repository
 
-```bash
+`ash
 git clone https://github.com/nandana-rnair/llm-denoising-system.git
 cd llm-denoising-system
-```
+`
 
 2. Create a virtual environment
 
-```bash
+`ash
 python -m venv venv
 venv\Scripts\activate
-```
+`
 
 3. Install dependencies
 
-```bash
+`ash
 pip install -r requirements.txt
-```
+`
 
-4. Create `.env`
+4. Create .env
 
-```text
+`	ext
 GROQ_API_KEY=your_api_key_here
-```
+`
 
 ---
 
@@ -164,23 +165,23 @@ GROQ_API_KEY=your_api_key_here
 
 Run the project with:
 
-```bash
+`ash
 python main.py
-```
+`
 
 Or run the app entrypoint with:
 
-```bash
+`ash
 python app.py
-```
+`
 
 ---
 
 ## Notes
 
-- Open `workflow.drawio` in draw.io / diagrams.net for the full visual workflow.
+- Open workflow.drawio in draw.io / diagrams.net for the full visual workflow.
 - Keep agent logic isolated for easier extension.
-- Use `utils/llm.py` as the central location for changing the LLM provider.
+- Use utils/llm.py as the central location for changing the LLM provider.
 
 ---
 
