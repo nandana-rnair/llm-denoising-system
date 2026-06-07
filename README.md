@@ -1,8 +1,8 @@
-# 🧠 LLM Output Denoising System (Multi-Agent AI Pipeline)
+# LLM Output Denoising System (Multi-Agent AI Pipeline)
 
 ---
 
-## 🧠 System Architecture
+## System Architecture
 
 The system follows a modular multi-agent pipeline that progressively refines and validates LLM outputs.
 User Input
@@ -76,7 +76,7 @@ Final Output + Quality Scores
 
 ---
 
-## 💡 Why This Project Matters
+##  Why This Project Matters
 
 Large Language Models often produce:
 - Hallucinated facts  
@@ -92,7 +92,7 @@ This system solves that by introducing a **multi-agent verification pipeline** t
 
 ---
 
-## 🤖 Agents Overview
+## Agents Overview
 
 - **Claim Extraction Agent** → Extracts factual statements from LLM output  
 - **Fact Checking Agent** → Validates claims using reasoning  
@@ -122,18 +122,18 @@ Where is the Eiffel Tower located?
 
 ## 🎯 Key Features
 
-- 🤖 LLM-based response generation using Groq API  
-- 🔍 Claim extraction  
-- ✅ Fact verification system  
-- 🔄 Consistency checking  
-- ✍️ Style improvement module  
-- 🧾 Final review agent  
-- 📊 Score-based evaluation system  
-- 🧩 Fully modular multi-agent architecture  
+-  LLM-based response generation using Groq API  
+-  Claim extraction  
+-  Fact verification system  
+-  Consistency checking  
+- Style improvement module  
+- Final review agent  
+-  Score-based evaluation system  
+- Fully modular multi-agent architecture  
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - Python 🐍  
 - Groq API  
